@@ -1,0 +1,53 @@
+/*---- customizing the chip bar ----*/
+:root {
+  	--chip-background: 				#A898FF;
+  	--chip-font: 					#fff;
+    --non-chip-font: 				#000;
+	  --selection-bar-background: 	#F0F0F0;
+//    --count-bar: 					visible;
+    --count-bar: 					hidden;
+}
+
+/*---- transform current selections bar into chips ----*/
+div.current-selections-item {
+	background-color: var(--chip-background) !important ;
+    color: #fff !important;
+    padding-top: 1px ;
+    padding-left: 5px ;
+    margin-top: 1px !important;
+    height: 95%
+}
+
+/*---- setting the background bar ----*/
+div.wrap.borderbox.qv-pager {
+	background-color: var(--selection-bar-background) !important ;
+    padding-left: 5px ;
+    border-radius: 0px !important ;
+}
+
+/*---- hiding the count bar from the chip ----*/
+.qv-panel-current-selections .qv-state-count-bar {
+	display: none;
+}
+
+/*---- option to hide the count bar from QS native filter bar ----*/
+.qv-state-count-bar {
+	visibility: var(--count-bar);
+}
+
+/*---- setting the chip font  ----*/
+.qv-panel-current-selections.ng-scope.ng-isolate-scope.bright * {
+	color: var(--chip-font) ;
+//    border: 1px;
+    border-radius: 15px;
+}
+
+/*---- setting the non-chip font  ----*/
+.qv-panel-current-selections .lui-icon, .selections.back {
+	color: var(--non-chip-font) !important ;
+}
+
+/*---- setting the "x" font color inside the chip  ----*/
+.qv-panel-current-selections .lui-icon--remove {
+	color: var(--chip-font) !important  ;
+}
